@@ -20,24 +20,25 @@ public class StudentController {
 
 		return studentServiceInstance.getAllStudents();
 	}
-	
-	
-	
+
 	@RequestMapping("/students/{id}")
 	public Student getStudent(@PathVariable int id) {
 
 		return studentServiceInstance.getStudent(id);
 	}
-	
-	@RequestMapping(method=RequestMethod.POST, value="/students")
-	public void addStudent(@RequestBody Student student){
-		
+
+	@RequestMapping(method = RequestMethod.POST, value = "/students")
+	public void addStudent(@RequestBody Student student) {
+
 		studentServiceInstance.addStudents(student);
-		
+
 	}
 	
-	
-	
+	@RequestMapping(method=RequestMethod.PUT, value="/students/{id}")
+	public void updateStudent(@RequestBody Student student, @PathVariable int id){
+		
+		studentServiceInstance.updateStudents(student, id);
+	}
 	
 
 }

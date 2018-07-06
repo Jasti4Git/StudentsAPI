@@ -33,4 +33,18 @@ public class StudentService {
 		
 	}
 
+	public void updateStudents(Student student, int id) {
+		
+		
+	for(int i=0;i<StudentList.size();i++){
+		Student s=StudentList.get(i);
+		if(id==s.getId()){
+			StudentList.set(i, student);
+		}
+		
+	}
+		
+		
+	}
+
 }
