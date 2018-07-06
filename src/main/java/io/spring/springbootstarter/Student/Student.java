@@ -3,8 +3,20 @@ package io.spring.springbootstarter.Student;
 public class Student {
 
 	private String name;
-	private int ID;
+	private int id;
 	private int score;
+
+
+
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -14,26 +26,11 @@ public class Student {
 		this.name = name;
 	}
 
-	public int getID() {
-		return ID;
-	}
-
-	public void setID(int iD) {
-		ID = iD;
-	}
-
 	public int getScore() {
 		return score;
 	}
 
 	public void setScore(int score) {
-		this.score = score;
-	}
-
-	public Student(String name, int iD, int score) {
-		super();
-		this.name = name;
-		ID = iD;
 		this.score = score;
 	}
 
