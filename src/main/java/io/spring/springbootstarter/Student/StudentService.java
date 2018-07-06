@@ -47,4 +47,15 @@ public class StudentService {
 		
 	}
 
+	public void deleteStudent(int id) {
+		
+		for(int i=0;i<StudentList.size();i++){
+			Student s=StudentList.get(i);
+			if(id==s.getId()){
+				StudentList.remove(i);
+			}
+			
+		}
+	}
+
 }

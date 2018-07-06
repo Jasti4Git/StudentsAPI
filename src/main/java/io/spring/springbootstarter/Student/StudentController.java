@@ -33,12 +33,17 @@ public class StudentController {
 		studentServiceInstance.addStudents(student);
 
 	}
-	
-	@RequestMapping(method=RequestMethod.PUT, value="/students/{id}")
-	public void updateStudent(@RequestBody Student student, @PathVariable int id){
-		
+
+	@RequestMapping(method = RequestMethod.PUT, value = "/students/{id}")
+	public void updateStudent(@RequestBody Student student, @PathVariable int id) {
+
 		studentServiceInstance.updateStudents(student, id);
 	}
-	
+
+	@RequestMapping(method = RequestMethod.DELETE, value = "/students/{id}")
+	public void deleteStudent(@PathVariable int id) {
+
+		studentServiceInstance.deleteStudent(id);
+	}
 
 }
