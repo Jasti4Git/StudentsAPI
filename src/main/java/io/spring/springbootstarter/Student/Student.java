@@ -1,14 +1,15 @@
 package io.spring.springbootstarter.Student;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Student {
 
-	private String name;
+	@Id
 	private int id;
+	private String name;
 	private int score;
-
-
-
-	
 
 	public int getId() {
 		return id;
@@ -31,6 +32,18 @@ public class Student {
 	}
 
 	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	
+	public Student(){
+		
+	}
+	
+	public Student(int id, String name, int score) {
+		super();
+		this.id = id;
+		this.name = name;
 		this.score = score;
 	}
 
